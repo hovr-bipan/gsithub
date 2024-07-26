@@ -1,0 +1,1334 @@
+bipansharma@Bipans-MacBook-Pro hovr % docker system prune -a -f --volumes  
+Deleted build cache objects:
+0711d5bns2q8vhaatxlbud24p
+yumoubshtnsrq6m6h4k8zfusu
+lnqjqf8sl2186wyxsl9kn8n64
+owsrn79incyw9ps4pbd625vwp
+p72oyrbfgbs923dge0oo8fttq
+i4jq9sedsy4iq6ohnpu9a46ok
+lb8zdvkpi64c7z0o4zuereb4p
+z7np38a08i0thmrzml5u9h9f7
+zbe30srs7ef44lc91mqr83b2z
+3rxeu0nqq5qc6qy6his43iid1
+unb0zhqt1t3qtdkhkdopkdc58
+smyj3s1k8j2sfhzu1lkz82co8
+
+Total reclaimed space: 725MB
+bipansharma@Bipans-MacBook-Pro hovr % ls
+backend	ls.txt
+bipansharma@Bipans-MacBook-Pro hovr % cd ../tools/pdocker 
+bipansharma@Bipans-MacBook-Pro pdocker % sudo ./build.sh 
+Password:
+[*] Start Building...
+[+] Building 23.0s (7/17)                                                       docker:default
+ => [internal] load build definition from Dockerfile                                      0.0s
+ => => transferring dockerfile: 1.23kB                                                    0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => [internal] load metadata for docker.io/library/debian:latest                          4.0s
+ => [internal] load .dockerignore                                                         0.0s
+ => => transferring context: 2B                                                           0.0s
+ => [ 1/14] FROM docker.io/library/debian:latest@sha256:1dc55ed6871771d4df68d393ed08d1ed  4.1s
+ => => resolve docker.io/library/debian:latest@sha256:1dc55ed6871771d4df68d393ed08d1ed93  0.0s
+ => => sha256:1dc55ed6871771d4df68d393ed08d1ed9361c577cfeb903cd684a182e8 1.85kB / 1.85kB  0.0s
+ => => sha256:820a611dc036cb57cee73613ce9da12530435b03007578153c04622e7f03f1 529B / 529B  0.0s
+ => => sha256:7b34f2fc561c06e26d69d7a5a58446e914c599479868abd6f5c5ed9577 1.46kB / 1.46kB  0.0s
+ => => sha256:e9aef93137af6e967e7242f3b3c8ecd8e6f571d1e6fdd9e72db0befe 49.55MB / 49.55MB  3.0s
+ => => extracting sha256:e9aef93137af6e967e7242f3b3c8ecd8e6f571d1e6fdd9e72db0befeeae3cf1  1.0s
+ => [ 2/14] WORKDIR /home/                                                                0.0s
+ => [ 3/14] RUN apt-get update -y     && apt-get upgrade -y                               4.0s
+ => ERROR [ 4/14] RUN apt-get install ruby -y                                            10.8s
+------                                                                                         
+ > [ 4/14] RUN apt-get install ruby -y:                                                        
+0.143 Reading package lists...                                                                 
+0.467 Building dependency tree...                                                              
+0.547 Reading state information...                                                             
+0.748 The following additional packages will be installed:                                     
+0.749   ca-certificates fonts-lato javascript-common libbsd0 libedit2 libgpm2
+0.749   libjs-jquery libncurses6 libruby libruby3.1 libssl3 libyaml-0-2 openssl rake
+0.749   ruby-net-telnet ruby-rubygems ruby-sdbm ruby-webrick ruby-xmlrpc ruby3.1
+0.749   rubygems-integration unzip zip
+0.750 Suggested packages:
+0.750   apache2 | lighttpd | httpd gpm ri ruby-dev bundler
+0.878 The following NEW packages will be installed:
+0.878   ca-certificates fonts-lato javascript-common libbsd0 libedit2 libgpm2
+0.879   libjs-jquery libncurses6 libruby libruby3.1 libssl3 libyaml-0-2 openssl rake
+0.879   ruby ruby-net-telnet ruby-rubygems ruby-sdbm ruby-webrick ruby-xmlrpc
+0.879   ruby3.1 rubygems-integration unzip zip
+0.958 0 upgraded, 24 newly installed, 0 to remove and 0 not upgraded.
+0.958 Need to get 14.0 MB of archives.
+0.958 After this operation, 52.1 MB of additional disk space will be used.
+0.958 Get:1 http://deb.debian.org/debian bookworm/main amd64 fonts-lato all 2.0-2.1 [2696 kB]
+1.105 Get:2 http://deb.debian.org/debian bookworm/main amd64 libssl3 amd64 3.0.13-1~deb12u1 [2022 kB]
+1.168 Get:3 http://deb.debian.org/debian bookworm/main amd64 openssl amd64 3.0.13-1~deb12u1 [1418 kB]
+1.240 Get:4 http://deb.debian.org/debian bookworm/main amd64 ca-certificates all 20230311 [153 kB]
+1.243 Get:5 http://deb.debian.org/debian bookworm/main amd64 javascript-common all 11+nmu1 [6260 B]
+1.244 Get:6 http://deb.debian.org/debian bookworm/main amd64 libbsd0 amd64 0.11.7-2 [117 kB]
+1.251 Get:7 http://deb.debian.org/debian bookworm/main amd64 libedit2 amd64 3.1-20221030-2 [93.0 kB]
+1.253 Get:8 http://deb.debian.org/debian bookworm/main amd64 libgpm2 amd64 1.20.7-10+b1 [14.2 kB]
+1.254 Get:9 http://deb.debian.org/debian bookworm/main amd64 libjs-jquery all 3.6.1+dfsg+~3.5.14-1 [326 kB]
+1.292 Get:10 http://deb.debian.org/debian bookworm/main amd64 libncurses6 amd64 6.4-4 [103 kB]
+1.294 Get:11 http://deb.debian.org/debian bookworm/main amd64 rubygems-integration all 1.18 [6704 B]
+1.294 Get:12 http://deb.debian.org/debian bookworm/main amd64 ruby3.1 amd64 3.1.2-7+deb12u1 [663 kB]
+1.320 Get:13 http://deb.debian.org/debian bookworm/main amd64 ruby-rubygems all 3.3.15-2 [293 kB]
+1.338 Get:14 http://deb.debian.org/debian bookworm/main amd64 ruby amd64 1:3.1 [5868 B]
+1.338 Get:15 http://deb.debian.org/debian bookworm/main amd64 rake all 13.0.6-3 [83.9 kB]
+1.347 Get:16 http://deb.debian.org/debian bookworm/main amd64 ruby-net-telnet all 0.2.0-1 [13.1 kB]
+1.348 Get:17 http://deb.debian.org/debian bookworm/main amd64 ruby-webrick all 1.8.1-1 [51.4 kB]
+1.349 Get:18 http://deb.debian.org/debian bookworm/main amd64 ruby-xmlrpc all 0.3.2-2 [24.4 kB]
+1.351 Get:19 http://deb.debian.org/debian bookworm/main amd64 ruby-sdbm amd64 1.0.0-5+b1 [15.4 kB]
+1.351 Get:20 http://deb.debian.org/debian bookworm/main amd64 libyaml-0-2 amd64 0.2.5-1 [53.6 kB]
+1.355 Get:21 http://deb.debian.org/debian bookworm/main amd64 libruby3.1 amd64 3.1.2-7+deb12u1 [5400 kB]
+1.709 Get:22 http://deb.debian.org/debian bookworm/main amd64 libruby amd64 1:3.1 [4972 B]
+1.709 Get:23 http://deb.debian.org/debian bookworm/main amd64 unzip amd64 6.0-28 [166 kB]
+1.712 Get:24 http://deb.debian.org/debian bookworm/main amd64 zip amd64 3.0-13 [230 kB]
+1.944 debconf: delaying package configuration, since apt-utils is not installed
+1.977 Fetched 14.0 MB in 1s (15.8 MB/s)
+2.026 Selecting previously unselected package fonts-lato.
+(Reading database ... 6089 files and directories currently installed.)
+2.029 Preparing to unpack .../00-fonts-lato_2.0-2.1_all.deb ...
+2.031 Unpacking fonts-lato (2.0-2.1) ...
+2.230 Selecting previously unselected package libssl3:amd64.
+2.231 Preparing to unpack .../01-libssl3_3.0.13-1~deb12u1_amd64.deb ...
+2.232 Unpacking libssl3:amd64 (3.0.13-1~deb12u1) ...
+2.380 Selecting previously unselected package openssl.
+2.380 Preparing to unpack .../02-openssl_3.0.13-1~deb12u1_amd64.deb ...
+2.381 Unpacking openssl (3.0.13-1~deb12u1) ...
+2.504 Selecting previously unselected package ca-certificates.
+2.505 Preparing to unpack .../03-ca-certificates_20230311_all.deb ...
+2.506 Unpacking ca-certificates (20230311) ...
+2.574 Selecting previously unselected package javascript-common.
+2.575 Preparing to unpack .../04-javascript-common_11+nmu1_all.deb ...
+2.642 Unpacking javascript-common (11+nmu1) ...
+2.701 Selecting previously unselected package libbsd0:amd64.
+2.702 Preparing to unpack .../05-libbsd0_0.11.7-2_amd64.deb ...
+2.703 Unpacking libbsd0:amd64 (0.11.7-2) ...
+2.767 Selecting previously unselected package libedit2:amd64.
+2.768 Preparing to unpack .../06-libedit2_3.1-20221030-2_amd64.deb ...
+2.768 Unpacking libedit2:amd64 (3.1-20221030-2) ...
+2.831 Selecting previously unselected package libgpm2:amd64.
+2.831 Preparing to unpack .../07-libgpm2_1.20.7-10+b1_amd64.deb ...
+2.832 Unpacking libgpm2:amd64 (1.20.7-10+b1) ...
+2.892 Selecting previously unselected package libjs-jquery.
+2.892 Preparing to unpack .../08-libjs-jquery_3.6.1+dfsg+~3.5.14-1_all.deb ...
+2.931 Unpacking libjs-jquery (3.6.1+dfsg+~3.5.14-1) ...
+3.003 Selecting previously unselected package libncurses6:amd64.
+3.003 Preparing to unpack .../09-libncurses6_6.4-4_amd64.deb ...
+3.004 Unpacking libncurses6:amd64 (6.4-4) ...
+3.068 Selecting previously unselected package rubygems-integration.
+3.068 Preparing to unpack .../10-rubygems-integration_1.18_all.deb ...
+3.069 Unpacking rubygems-integration (1.18) ...
+3.128 Selecting previously unselected package ruby3.1.
+3.129 Preparing to unpack .../11-ruby3.1_3.1.2-7+deb12u1_amd64.deb ...
+3.130 Unpacking ruby3.1 (3.1.2-7+deb12u1) ...
+3.194 Selecting previously unselected package ruby-rubygems.
+3.195 Preparing to unpack .../12-ruby-rubygems_3.3.15-2_all.deb ...
+3.196 Unpacking ruby-rubygems (3.3.15-2) ...
+3.268 Selecting previously unselected package ruby.
+3.269 Preparing to unpack .../13-ruby_1%3a3.1_amd64.deb ...
+3.297 Unpacking ruby (1:3.1) ...
+3.355 Selecting previously unselected package rake.
+3.355 Preparing to unpack .../14-rake_13.0.6-3_all.deb ...
+3.356 Unpacking rake (13.0.6-3) ...
+3.418 Selecting previously unselected package ruby-net-telnet.
+3.419 Preparing to unpack .../15-ruby-net-telnet_0.2.0-1_all.deb ...
+3.419 Unpacking ruby-net-telnet (0.2.0-1) ...
+3.477 Selecting previously unselected package ruby-webrick.
+3.478 Preparing to unpack .../16-ruby-webrick_1.8.1-1_all.deb ...
+3.478 Unpacking ruby-webrick (1.8.1-1) ...
+3.538 Selecting previously unselected package ruby-xmlrpc.
+3.539 Preparing to unpack .../17-ruby-xmlrpc_0.3.2-2_all.deb ...
+3.540 Unpacking ruby-xmlrpc (0.3.2-2) ...
+3.598 Selecting previously unselected package ruby-sdbm:amd64.
+3.598 Preparing to unpack .../18-ruby-sdbm_1.0.0-5+b1_amd64.deb ...
+3.599 Unpacking ruby-sdbm:amd64 (1.0.0-5+b1) ...
+3.658 Selecting previously unselected package libyaml-0-2:amd64.
+3.658 Preparing to unpack .../19-libyaml-0-2_0.2.5-1_amd64.deb ...
+3.659 Unpacking libyaml-0-2:amd64 (0.2.5-1) ...
+3.721 Selecting previously unselected package libruby3.1:amd64.
+3.722 Preparing to unpack .../20-libruby3.1_3.1.2-7+deb12u1_amd64.deb ...
+3.723 Unpacking libruby3.1:amd64 (3.1.2-7+deb12u1) ...
+4.031 Selecting previously unselected package libruby:amd64.
+4.034 Preparing to unpack .../21-libruby_1%3a3.1_amd64.deb ...
+4.034 Unpacking libruby:amd64 (1:3.1) ...
+4.093 Selecting previously unselected package unzip.
+4.093 Preparing to unpack .../22-unzip_6.0-28_amd64.deb ...
+4.094 Unpacking unzip (6.0-28) ...
+4.159 Selecting previously unselected package zip.
+4.160 Preparing to unpack .../23-zip_3.0-13_amd64.deb ...
+4.161 Unpacking zip (3.0-13) ...
+4.217 Setting up javascript-common (11+nmu1) ...
+4.336 Setting up fonts-lato (2.0-2.1) ...
+4.338 Setting up libgpm2:amd64 (1.20.7-10+b1) ...
+4.340 Setting up libyaml-0-2:amd64 (0.2.5-1) ...
+4.342 Setting up unzip (6.0-28) ...
+4.365 Setting up libssl3:amd64 (3.0.13-1~deb12u1) ...
+4.368 Setting up zip (3.0-13) ...
+4.370 Setting up libncurses6:amd64 (6.4-4) ...
+4.372 Setting up ruby-net-telnet (0.2.0-1) ...
+4.374 Setting up ruby-webrick (1.8.1-1) ...
+4.376 Setting up libjs-jquery (3.6.1+dfsg+~3.5.14-1) ...
+4.416 Setting up openssl (3.0.13-1~deb12u1) ...
+4.428 Setting up libbsd0:amd64 (0.11.7-2) ...
+4.430 Setting up ruby-xmlrpc (0.3.2-2) ...
+4.433 Setting up libedit2:amd64 (3.1-20221030-2) ...
+4.435 Setting up ca-certificates (20230311) ...
+4.618 debconf: unable to initialize frontend: Dialog
+4.618 debconf: (TERM is not set, so the dialog frontend is not usable.)
+4.618 debconf: falling back to frontend: Readline
+4.618 debconf: unable to initialize frontend: Readline
+4.618 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.36.0 /usr/local/share/perl/5.36.0 /usr/lib/x86_64-linux-gnu/perl5/5.36 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.36 /usr/share/perl/5.36 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+4.618 debconf: falling back to frontend: Teletype
+7.716 Updating certificates in /etc/ssl/certs...
+10.66 Illegal instruction
+10.70 dpkg: error processing package ca-certificates (--configure):
+10.70  installed ca-certificates package post-installation script subprocess returned error exit status 132
+10.70 dpkg: dependency problems prevent configuration of rubygems-integration:
+10.70  rubygems-integration depends on ca-certificates; however:
+10.70   Package ca-certificates is not configured yet.
+10.70 
+10.70 dpkg: error processing package rubygems-integration (--configure):
+10.70  dependency problems - leaving unconfigured
+10.70 dpkg: dependency problems prevent configuration of ruby3.1:
+10.70  ruby3.1 depends on rubygems-integration (>= 1.17.1~); however:
+10.70   Package rubygems-integration is not configured yet.
+10.70 
+10.70 dpkg: error processing package ruby3.1 (--configure):
+10.70  dependency problems - leaving unconfigured
+10.70 dpkg: dependency problems prevent configuration of ruby:
+10.70  ruby depends on ruby3.1; however:
+10.70   Package ruby3.1 is not configured yet.
+10.70 
+10.70 dpkg: error processing package ruby (--configure):
+10.70  dependency problems - leaving unconfigured
+10.70 dpkg: dependency problems prevent configuration of rake:
+10.70  rake depends on ruby:any; however:
+10.70   Package ruby is not configured yet.
+10.70 
+10.70 dpkg: error processing package rake (--configure):
+10.70  dependency problems - leaving unconfigured
+10.70 dpkg: dependency problems prevent configuration of libruby3.1:amd64:
+10.70  libruby3.1:amd64 depends on rake (>= 10.4.2); however:
+10.70   Package rake is not configured yet.
+10.70 
+10.70 dpkg: error processing package libruby3.1:amd64 (--configure):
+10.70  dependency problems - leaving unconfigured
+10.70 dpkg: dependency problems prevent configuration of libruby:amd64:
+10.70  libruby:amd64 depends on libruby3.1; however:
+10.70   Package libruby3.1:amd64 is not configured yet.
+10.70 
+10.70 dpkg: error processing package libruby:amd64 (--configure):
+10.70  dependency problems - leaving unconfigured
+10.70 dpkg: dependency problems prevent configuration of ruby-rubygems:
+10.70  ruby-rubygems depends on ruby:any; however:
+10.70   Package ruby is not configured yet.
+10.70 
+10.70 dpkg: error processing package ruby-rubygems (--configure):
+10.70  dependency problems - leaving unconfigured
+10.70 dpkg: dependency problems prevent configuration of ruby-sdbm:amd64:
+10.70  ruby-sdbm:amd64 depends on libruby3.1 (>= 3.1.2); however:
+10.70   Package libruby3.1:amd64 is not configured yet.
+10.70  ruby-sdbm:amd64 depends on libruby (>= 1:3.1~0); however:
+10.70   Package libruby:amd64 is not configured yet.
+10.70  ruby-sdbm:amd64 depends on libruby (<< 1:3.2~); however:
+10.70   Package libruby:amd64 is not configured yet.
+10.70 
+10.70 dpkg: error processing package ruby-sdbm:amd64 (--configure):
+10.70  dependency problems - leaving unconfigured
+10.70 Processing triggers for libc-bin (2.36-9+deb12u7) ...
+10.73 Errors were encountered while processing:
+10.73  ca-certificates
+10.73  rubygems-integration
+10.73  ruby3.1
+10.73  ruby
+10.73  rake
+10.73  libruby3.1:amd64
+10.73  libruby:amd64
+10.73  ruby-rubygems
+10.73  ruby-sdbm:amd64
+10.75 E: Sub-process /usr/bin/dpkg returned an error code (1)
+------
+WARNING: current commit information was not captured by the build: failed to read current commit information with git rev-parse --is-inside-work-tree
+
+ 6 warnings found (use --debug to expand):
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 11)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 19)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 22)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 25)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 28)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 31)
+Dockerfile:19
+--------------------
+  17 |     
+  18 |     # Install Ruby
+  19 | >>> Run apt-get install ruby -y
+  20 |     
+  21 |     # Install Net-tools
+--------------------
+ERROR: failed to solve: process "/bin/sh -c apt-get install ruby -y" did not complete successfully: exit code: 100
+[*] Image Building Complete.
+[*] Use pdocker to start the enviroment. Enjoy.
+bipansharma@Bipans-MacBook-Pro pdocker % 
+bipansharma@Bipans-MacBook-Pro pdocker % 
+bipansharma@Bipans-MacBook-Pro pdocker % sudo ./build.sh
+[*] Start Building...
+[+] Building 202.1s (14/17)                                                     docker:default
+ => [internal] load build definition from Dockerfile                                      0.0s
+ => => transferring dockerfile: 1.23kB                                                    0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => [internal] load metadata for docker.io/library/debian:latest                          0.9s
+ => [internal] load .dockerignore                                                         0.0s
+ => => transferring context: 2B                                                           0.0s
+ => [ 1/14] FROM docker.io/library/debian:latest@sha256:1dc55ed6871771d4df68d393ed08d1ed  0.0s
+ => CACHED [ 2/14] WORKDIR /home/                                                         0.0s
+ => CACHED [ 3/14] RUN apt-get update -y     && apt-get upgrade -y                        0.0s
+ => [ 4/14] RUN apt-get install ruby -y                                                  17.2s
+ => [ 5/14] RUN apt-get install net-tools -y                                              1.3s 
+ => [ 6/14] RUN apt-get install git -y                                                    7.8s 
+ => [ 7/14] RUN apt-get install build-essential -y                                       63.7s 
+ => [ 8/14] RUN apt-get install curl -y                                                   1.4s 
+ => [ 9/14] RUN useradd -m -s /bin/bash linuxbrew &&     echo 'linuxbrew ALL=(ALL) NOPAS  0.1s 
+ => [10/14] RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/instal  108.9s 
+ => ERROR [11/14] RUN brew install golang                                                 0.7s 
+------                                                                                         
+ > [11/14] RUN brew install golang:                                                            
+0.677 Error: Running Homebrew as root is extremely dangerous and no longer supported.          
+0.685 As Homebrew does not drop privileges on installation you would be giving all             
+0.685 build scripts full access to your system.                                                
+------
+WARNING: current commit information was not captured by the build: failed to read current commit information with git rev-parse --is-inside-work-tree
+
+ 6 warnings found (use --debug to expand):
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 11)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 19)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 22)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 25)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 28)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 31)
+Dockerfile:43
+--------------------
+  41 |     ENV PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
+  42 |     
+  43 | >>> RUN brew install golang
+  44 |     RUN brew install bufbuild/buf/buf
+  45 |     RUN echo "export GOPRIVATE=github.com/defensestation/*" >> ~/.bashrc
+--------------------
+ERROR: failed to solve: process "/bin/sh -c brew install golang" did not complete successfully: exit code: 1
+[*] Image Building Complete.
+[*] Use pdocker to start the enviroment. Enjoy.
+bipansharma@Bipans-MacBook-Pro pdocker % sudo ./build.sh
+[*] Start Building...
+[+] Building 129.5s (18/18) FINISHED                                            docker:default
+ => [internal] load build definition from Dockerfile                                      0.0s
+ => => transferring dockerfile: 1.25kB                                                    0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => WARN: ConsistentInstructionCasing: Command 'Run' should match the case of the comman  0.0s
+ => [internal] load metadata for docker.io/library/debian:latest                          1.7s
+ => [internal] load .dockerignore                                                         0.0s
+ => => transferring context: 2B                                                           0.0s
+ => [ 1/14] FROM docker.io/library/debian:latest@sha256:1dc55ed6871771d4df68d393ed08d1ed  0.0s
+ => CACHED [ 2/14] WORKDIR /home/                                                         0.0s
+ => CACHED [ 3/14] RUN apt-get update -y     && apt-get upgrade -y                        0.0s
+ => CACHED [ 4/14] RUN apt-get install ruby -y                                            0.0s
+ => CACHED [ 5/14] RUN apt-get install net-tools -y                                       0.0s
+ => CACHED [ 6/14] RUN apt-get install git -y                                             0.0s
+ => CACHED [ 7/14] RUN apt-get install build-essential -y                                 0.0s
+ => CACHED [ 8/14] RUN apt-get install curl -y                                            0.0s
+ => CACHED [ 9/14] RUN useradd -m -s /bin/bash linuxbrew &&     echo 'linuxbrew ALL=(ALL  0.0s
+ => CACHED [10/14] RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/i  0.0s
+ => [11/14] RUN brew install golang                                                      64.3s
+ => [12/14] RUN brew install bufbuild/buf/buf                                            61.8s 
+ => [13/14] RUN echo "export GOPRIVATE=github.com/defensestation/*" >> ~/.bashrc          0.1s 
+ => [14/14] RUN git config --global url.ssh://git@github.com/.insteadOf https://github.c  0.2s 
+ => exporting to image                                                                    1.4s 
+ => => exporting layers                                                                   1.4s 
+ => => writing image sha256:4d381a804dfdd06fe3ad541d2237dc47c566a2ebe71c4d4fbb5d4f6675df  0.0s 
+ => => naming to docker.io/library/pdocker                                                0.0s 
+WARNING: current commit information was not captured by the build: failed to read current commit information with git rev-parse --is-inside-work-tree
+
+ 6 warnings found (use --debug to expand):
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 11)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 19)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 22)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 25)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 28)
+ - ConsistentInstructionCasing: Command 'Run' should match the case of the command majority (uppercase) (line 31)
+[*] Image Building Complete.
+[*] Use pdocker to start the enviroment. Enjoy.
+bipansharma@Bipans-MacBook-Pro pdocker % cd ../../hovr 
+bipansharma@Bipans-MacBook-Pro hovr % ls
+backend	ls.txt
+bipansharma@Bipans-MacBook-Pro hovr % pdocker    
+[-] No pdocker containers found.
+Usage: pdocker options
+Options: [(n|new)|(d|delete)|(da|delete_all)|(op|open_ports)|(h|help)]
+bipansharma@Bipans-MacBook-Pro hovr % pdocker n
+[*] New Container Name:hovr
+[*] Select Options for adding Volume:
+=> Select current: y
+=> No volume: n
+=> Type the path for volume
+>>y 
+Open ports n/[80:81] >>3000-3010:3000-3010
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+linuxbrew@8a74c87a7bfe:/home$ go
+Go is a tool for managing Go source code.
+
+Usage:
+
+	go <command> [arguments]
+
+The commands are:
+
+	bug         start a bug report
+	build       compile packages and dependencies
+	clean       remove object files and cached files
+	doc         show documentation for package or symbol
+	env         print Go environment information
+	fix         update packages to use new APIs
+	fmt         gofmt (reformat) package sources
+	generate    generate Go files by processing source
+	get         add dependencies to current module and install them
+	install     compile and install packages and dependencies
+	list        list packages or modules
+	mod         module maintenance
+	work        workspace maintenance
+	run         compile and run Go program
+	test        test packages
+	tool        run specified go tool
+	version     print Go version
+	vet         report likely mistakes in packages
+
+Use "go help <command>" for more information about a command.
+
+Additional help topics:
+
+	buildconstraint build constraints
+	buildmode       build modes
+	c               calling between Go and C
+	cache           build and test caching
+	environment     environment variables
+	filetype        file types
+	go.mod          the go.mod file
+	gopath          GOPATH environment variable
+	goproxy         module proxy protocol
+	importpath      import path syntax
+	modules         modules, module versions, and more
+	module-auth     module authentication using go.sum
+	packages        package lists and patterns
+	private         configuration for downloading non-public code
+	testflag        testing flags
+	testfunc        testing functions
+	vcs             controlling version control with GOVCS
+
+Use "go help <topic>" for more information about that topic.
+
+linuxbrew@8a74c87a7bfe:/home$ cd hovr/backend/iam-service/
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ ssh-keygen -y
+Enter file in which the key is (/home/linuxbrew/.ssh/id_rsa): 
+/home/linuxbrew/.ssh/id_rsa: No such file or directory
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ ssh-keygen   
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/linuxbrew/.ssh/id_rsa): 
+Created directory '/home/linuxbrew/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/linuxbrew/.ssh/id_rsa
+Your public key has been saved in /home/linuxbrew/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:tIIyrTqo/M9p6Y3WvaITcYVOztlw48arTknHSfJzIWs linuxbrew@8a74c87a7bfe
+The key's randomart image is:
++---[RSA 3072]----+
+|        .        |
+|       + +       |
+|      =.Xo..     |
+|   . o B=*+ .    |
+|  o o +.SE..     |
+|   + ...+.o      |
+|. .   +oo        |
+|+.  .==+ .       |
+|+o..=B+o...      |
++----[SHA256]-----+
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ cat ~/.ssh/id_rsa.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWkP1sy18md4GoaNYxs1g4nJ8GGngcBSiXtLRPzEv0sCw7QuRDIjQwu5yaVSRmsNKY72YZagbJ44W75s381WtzPk0eGPl5rcY+hfzo0xeuk503Q3B2SEkCfM+J25FOwPbUMZoxWjApB9mVs5HIY6GIAnUTv2DIMs7uVLP5bqSFK9cFtmK3Q/IU/qbhDhkatiG2/QMnIzH4FLWqyTjFUpvzT6zoLISXW+QI7oJBpB6/MMpayIRYBpKD2LAK+uFPhDaKatU5nnIm3JSDF9u0zjT1MO+l8pRB+4gVp9Wa5K1oiAABKCM11/jjTDz4QjKBNp3uttgvx+GKP9Yy9nwYC1WGWp5FXNQp8sYvIiw4EZNEEq6yeJo7IwD0lQyCCKRUPScqQqs7rSyK7sGQKmCmb/cSiubH/S6qOPJDfgA9Ic9Qyy+nAxCfSF3Pbli7nO7oxQlRRnapxEBYc86wu3bOOM+nWczkCHO5pj3spJh6yKsUGHQz6qvA58upKfeKNcKE9eU= linuxbrew@8a74c87a7bfe
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ go mod tidy
+go: downloading google.golang.org/grpc v1.65.0
+go: downloading github.com/defensestation/goutils v0.0.0-20240615214920-4c235ed080ef
+go: downloading github.com/defensestation/goconfig v0.0.0-20231120022553-42f0cd297227
+go: downloading google.golang.org/protobuf v1.34.2
+go: downloading github.com/aws/aws-sdk-go-v2 v1.26.1
+go: downloading github.com/aws/aws-sdk-go-v2/service/dynamodb v1.31.1
+go: downloading github.com/defensestation/dynamoutils v0.0.0-20230329082026-6ef102df76fd
+go: downloading github.com/aws/smithy-go v1.20.2
+go: downloading golang.org/x/net v0.25.0
+go: downloading golang.org/x/sys v0.20.0
+go: downloading github.com/aws/aws-sdk-go-v2/internal/configsources v1.3.5
+go: downloading github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.11.2
+go: downloading github.com/aws/aws-sdk-go-v2/service/internal/endpoint-discovery v1.9.6
+go: downloading github.com/jmespath/go-jmespath v0.4.0
+go: downloading google.golang.org/genproto/googleapis/rpc v0.0.0-20240528184218-531527333157
+go: downloading github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.6.5
+go: downloading golang.org/x/text v0.15.0
+go: github.com/ridehovr/iam-service/cmd/helper imports
+	github.com/defensestation/dynamoutils: github.com/defensestation/dynamoutils@v0.0.0-20230329082026-6ef102df76fd: invalid version: git ls-remote -q origin in /home/linuxbrew/go/pkg/mod/cache/vcs/0a38ac9e2c533080c0d2634ec237ec7a457942b7990187d0ecabdf64474c9635: exit status 128:
+	Host key verification failed.
+	fatal: Could not read from remote repository.
+	
+	Please make sure you have the correct access rights
+	and the repository exists.
+go: github.com/ridehovr/iam-service/cmd/server imports
+	github.com/defensestation/goutils/logger: github.com/defensestation/goutils@v0.0.0-20240615214920-4c235ed080ef: invalid version: git ls-remote -q origin in /home/linuxbrew/go/pkg/mod/cache/vcs/82793a328556e41fcaa0a73da24cc6a23442c5f739caf3da51111ec4d6f4d0c5: exit status 128:
+	Host key verification failed.
+	fatal: Could not read from remote repository.
+	
+	Please make sure you have the correct access rights
+	and the repository exists.
+go: github.com/ridehovr/iam-service/configs imports
+	github.com/defensestation/goconfig: github.com/defensestation/goconfig@v0.0.0-20231120022553-42f0cd297227: invalid version: git ls-remote -q origin in /home/linuxbrew/go/pkg/mod/cache/vcs/d0ed0667536d87e6438622e69333d858df2f09f8a773857563c92def9a3ef509: exit status 128:
+	Host key verification failed.
+	fatal: Could not read from remote repository.
+	
+	Please make sure you have the correct access rights
+	and the repository exists.
+go: github.com/ridehovr/iam-service/gen/protos/api/v1/iam imports
+	google.golang.org/grpc tested by
+	google.golang.org/grpc.test imports
+	github.com/google/go-cmp/cmp: github.com/defensestation/dynamoutils@v0.0.0-20230329082026-6ef102df76fd: invalid version: git ls-remote -q origin in /home/linuxbrew/go/pkg/mod/cache/vcs/0a38ac9e2c533080c0d2634ec237ec7a457942b7990187d0ecabdf64474c9635: exit status 128:
+	Host key verification failed.
+	fatal: Could not read from remote repository.
+	
+	Please make sure you have the correct access rights
+	and the repository exists.
+go: github.com/ridehovr/iam-service/cmd/helper imports
+	github.com/aws/aws-sdk-go-v2/service/dynamodb imports
+	github.com/jmespath/go-jmespath tested by
+	github.com/jmespath/go-jmespath.test imports
+	github.com/jmespath/go-jmespath/internal/testify/assert: github.com/defensestation/dynamoutils@v0.0.0-20230329082026-6ef102df76fd: invalid version: git ls-remote -q origin in /home/linuxbrew/go/pkg/mod/cache/vcs/0a38ac9e2c533080c0d2634ec237ec7a457942b7990187d0ecabdf64474c9635: exit status 128:
+	Host key verification failed.
+	fatal: Could not read from remote repository.
+	
+	Please make sure you have the correct access rights
+	and the repository exists.
+go: github.com/ridehovr/iam-service/gen/protos/api/v1/iam imports
+	google.golang.org/grpc imports
+	google.golang.org/grpc/internal/balancer/gracefulswitch tested by
+	google.golang.org/grpc/internal/balancer/gracefulswitch.test imports
+	github.com/google/go-cmp/cmp/cmpopts: github.com/defensestation/dynamoutils@v0.0.0-20230329082026-6ef102df76fd: invalid version: git ls-remote -q origin in /home/linuxbrew/go/pkg/mod/cache/vcs/0a38ac9e2c533080c0d2634ec237ec7a457942b7990187d0ecabdf64474c9635: exit status 128:
+	Host key verification failed.
+	fatal: Could not read from remote repository.
+	
+	Please make sure you have the correct access rights
+	and the repository exists.
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ ssh-keyscan -t rsa domain.example >^C~/.ssh/known_hosts
+bash: ^C~/.ssh/known_hosts: No such file or directory
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+# github.com:22 SSH-2.0-babeld-2533c54da
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ go mod tidy 
+go: downloading github.com/defensestation/dynamoutils v0.0.0-20230329082026-6ef102df76fd
+go: downloading github.com/defensestation/goutils v0.0.0-20240615214920-4c235ed080ef
+go: downloading github.com/defensestation/goconfig v0.0.0-20231120022553-42f0cd297227
+go: downloading github.com/knadh/koanf/v2 v2.0.1
+go: downloading github.com/defensestation/koanf/providers/parameterstore v0.0.0-20231120022527-8f5d76eec9b0
+go: downloading github.com/knadh/koanf/parsers/yaml v0.1.0
+go: downloading github.com/knadh/koanf/providers/file v0.1.0
+go: downloading github.com/defensestation/koanf/providers/secretsmanager v0.0.0-20231120022527-8f5d76eec9b0
+go: downloading github.com/aws/aws-sdk-go-v2/credentials v1.17.11
+go: downloading github.com/aws/aws-sdk-go-v2/config v1.27.11
+go: downloading github.com/aws/aws-sdk-go-v2/service/ssm v1.43.0
+go: downloading github.com/google/go-cmp v0.6.0
+go: downloading github.com/jmespath/go-jmespath/internal/testify v1.5.1
+go: downloading github.com/aws/aws-sdk-go-v2/service/sts v1.28.6
+go: downloading github.com/knadh/koanf/maps v0.1.1
+go: downloading github.com/knadh/koanf/parsers/json v0.1.0
+go: downloading github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.23.2
+go: downloading github.com/aws/aws-sdk-go-v2/feature/dynamodb/attributevalue v1.13.13
+go: downloading github.com/aws/aws-sdk-go-v2/feature/dynamodb/expression v1.7.13
+go: downloading github.com/hjson/hjson-go/v4 v4.3.0
+go: downloading golang.org/x/exp v0.0.0-20230510235704-dd950f8aeaea
+go: downloading github.com/stretchr/testify v1.8.2
+go: downloading gopkg.in/yaml.v3 v3.0.1
+go: downloading github.com/defensestation/goauth v0.0.0-20230404052103-0dc4b879bf68
+go: downloading go.uber.org/zap v1.25.0
+go: downloading github.com/fsnotify/fsnotify v1.6.0
+go: downloading github.com/mitchellh/copystructure v1.2.0
+go: downloading github.com/mitchellh/mapstructure v1.5.0
+go: downloading github.com/davecgh/go-spew v1.1.1
+go: downloading github.com/pmezard/go-difflib v1.0.0
+go: downloading gopkg.in/yaml.v2 v2.4.0
+go: downloading github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.16.1
+go: downloading github.com/aws/aws-sdk-go-v2/internal/ini v1.8.0
+go: downloading github.com/aws/aws-sdk-go-v2/service/sso v1.20.5
+go: downloading github.com/aws/aws-sdk-go-v2/service/ssooidc v1.23.4
+go: downloading gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127
+go: downloading github.com/defensestation/gobroker v0.0.0-20230226221345-9765c0e6ea51
+go: downloading github.com/redis/go-redis/v9 v9.1.0
+go: downloading go.uber.org/multierr v1.10.0
+go: downloading go.uber.org/goleak v1.2.0
+go: downloading github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.11.7
+go: downloading github.com/aws/aws-sdk-go-v2/service/dynamodbstreams v1.20.4
+go: downloading github.com/jaevor/go-nanoid v1.3.0
+go: downloading github.com/benbjohnson/clock v1.3.0
+go: downloading github.com/cespare/xxhash/v2 v2.3.0
+go: downloading github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f
+go: downloading github.com/bsm/ginkgo/v2 v2.9.5
+go: downloading github.com/bsm/gomega v1.26.0
+go: downloading github.com/mitchellh/reflectwalk v1.0.2
+go: downloading github.com/rabbitmq/amqp091-go v1.7.0
+go: downloading github.com/kr/pretty v0.1.0
+go: downloading github.com/kr/text v0.2.0
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ apt-get install vim -y
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ sudo apt-get install vim -y
+bash: sudo: command not found
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ sudo apt-get install vim   
+bash: sudo: command not found
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ exit
+exit
+bipansharma@Bipans-MacBook-Pro hovr % pdocker
+[*] List of containers ids. Newer are first.
+=======================
+    ID 		 Name
+------------  --------
+8a74c87a7bfe	hovr
+=======================
+[*] Type the Container ID or Name:hovr
+[*] Staring hovr container...
+hovr
+linuxbrew@8a74c87a7bfe:/home$ cd hovr/backend/iam-service/
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ ls
+README.md  buf.gen.yaml  buf.yaml  config.yaml  gen     go.sum
+api        buf.lock      cmd       configs      go.mod
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ go
+Go is a tool for managing Go source code.
+
+Usage:
+
+	go <command> [arguments]
+
+The commands are:
+
+	bug         start a bug report
+	build       compile packages and dependencies
+	clean       remove object files and cached files
+	doc         show documentation for package or symbol
+	env         print Go environment information
+	fix         update packages to use new APIs
+	fmt         gofmt (reformat) package sources
+	generate    generate Go files by processing source
+	get         add dependencies to current module and install them
+	install     compile and install packages and dependencies
+	list        list packages or modules
+	mod         module maintenance
+	work        workspace maintenance
+	run         compile and run Go program
+	test        test packages
+	tool        run specified go tool
+	version     print Go version
+	vet         report likely mistakes in packages
+
+Use "go help <command>" for more information about a command.
+
+Additional help topics:
+
+	buildconstraint build constraints
+	buildmode       build modes
+	c               calling between Go and C
+	cache           build and test caching
+	environment     environment variables
+	filetype        file types
+	go.mod          the go.mod file
+	gopath          GOPATH environment variable
+	goproxy         module proxy protocol
+	importpath      import path syntax
+	modules         modules, module versions, and more
+	module-auth     module authentication using go.sum
+	packages        package lists and patterns
+	private         configuration for downloading non-public code
+	testflag        testing flags
+	testfunc        testing functions
+	vcs             controlling version control with GOVCS
+
+Use "go help <topic>" for more information about that topic.
+
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ apt-get install vim -y
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ sudo apt-get install vim -y
+bash: sudo: command not found
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ su 
+Password: 
+su: Authentication failure
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ su roort
+su: user roort does not exist or the user entry does not contain all the required fields
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ su root
+\Password: 
+su: Authentication failure
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ su root
+Password: 
+su: Authentication failure
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ su root -
+Password: 
+^C
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ su -
+Password: 
+su: Authentication failure
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ brew install vim
+==> Auto-updating Homebrew...
+Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with
+HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Downloading https://ghcr.io/v2/homebrew/core/vim/manifests/9.1.0600
+######################################################################################## 100.0%
+==> Fetching dependencies for vim: icu4c, ncurses, readline, zlib, libxml2, gettext, libsodium, lua, berkeley-db@5, gdbm, expat, libxcrypt, perl, mpdecimal, ca-certificates, openssl@3, sqlite, xz, libedit, krb5, libtirpc, libnsl, bzip2, libffi, unzip, python@3.12, libyaml, gperf, ruby and acl
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/manifests/74.2
+######################################################################################## 100.0%
+==> Fetching icu4c
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/blobs/sha256:2b881638861905a1a730cdd6189
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/manifests/6.5
+######################################################################################## 100.0%
+==> Fetching ncurses
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/blobs/sha256:7c49662d0f319baec24475d38
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/manifests/8.2.10
+######################################################################################## 100.0%
+==> Fetching readline
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/blobs/sha256:65181d2c0a9bd1d91ded6f7e
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/zlib/manifests/1.3.1
+######################################################################################## 100.0%
+==> Fetching zlib
+==> Downloading https://ghcr.io/v2/homebrew/core/zlib/blobs/sha256:38f2469db2ce63b70855a98e5ee2
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxml2/manifests/2.12.8
+######################################################################################## 100.0%
+==> Fetching libxml2
+==> Downloading https://ghcr.io/v2/homebrew/core/libxml2/blobs/sha256:fb5cd905b75c9bed36f3deb28
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gettext/manifests/0.22.5
+######################################################################################## 100.0%
+==> Fetching gettext
+==> Downloading https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:11f57f3c216f3603a194fe96d
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libsodium/manifests/1.0.20
+######################################################################################## 100.0%
+==> Fetching libsodium
+==> Downloading https://ghcr.io/v2/homebrew/core/libsodium/blobs/sha256:94394d217dc5a833492a702
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/lua/manifests/5.4.7
+######################################################################################## 100.0%
+==> Fetching lua
+==> Downloading https://ghcr.io/v2/homebrew/core/lua/blobs/sha256:9e21c57b663809dfdbf18aa773bac
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/5/manifests/5.3.28_1
+######################################################################################## 100.0%
+==> Fetching berkeley-db@5
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/5/blobs/sha256:c0e2906cc6657dc497f
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gdbm/manifests/1.24
+######################################################################################## 100.0%
+==> Fetching gdbm
+==> Downloading https://ghcr.io/v2/homebrew/core/gdbm/blobs/sha256:7fd35749fc28a0bf5e2f3c7cc74d
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/manifests/2.6.2
+######################################################################################## 100.0%
+==> Fetching expat
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/blobs/sha256:00d8e476d4e3ec9c02be088eb7c
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcrypt/manifests/4.4.36
+######################################################################################## 100.0%
+==> Fetching libxcrypt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcrypt/blobs/sha256:ad1c4b570d7a66046038c13
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/perl/manifests/5.38.2_1
+######################################################################################## 100.0%
+==> Fetching perl
+==> Downloading https://ghcr.io/v2/homebrew/core/perl/blobs/sha256:8c6038740fee1c2084880a53765c
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/mpdecimal/manifests/4.0.0-1
+######################################################################################## 100.0%
+==> Fetching mpdecimal
+==> Downloading https://ghcr.io/v2/homebrew/core/mpdecimal/blobs/sha256:ca79318fa094531bd57b3f0
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2024-07-02
+######################################################################################## 100.0%
+==> Fetching ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:73eb1a6bf9a5e12ee
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.3.1
+######################################################################################## 100.0%
+==> Fetching openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:d84029bfaf8a5452329d7e2
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/sqlite/manifests/3.46.0
+######################################################################################## 100.0%
+==> Fetching sqlite
+==> Downloading https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:59a0e215241a61198522935327
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.6.2
+######################################################################################## 100.0%
+==> Fetching xz
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:ab97999c22de61b2efa61c2a3f62d2
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libedit/manifests/20240517-3.1
+######################################################################################## 100.0%
+==> Fetching libedit
+==> Downloading https://ghcr.io/v2/homebrew/core/libedit/blobs/sha256:a5eda364492fa30e07098bea7
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/krb5/manifests/1.21.3
+######################################################################################## 100.0%
+==> Fetching krb5
+==> Downloading https://ghcr.io/v2/homebrew/core/krb5/blobs/sha256:f5b4cafedb315e92a31a0a5d87e3
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libtirpc/manifests/1.3.4
+######################################################################################## 100.0%
+==> Fetching libtirpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libtirpc/blobs/sha256:ddd04177b907c57c70393dae
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libnsl/manifests/2.0.1
+######################################################################################## 100.0%
+==> Fetching libnsl
+==> Downloading https://ghcr.io/v2/homebrew/core/libnsl/blobs/sha256:fd62e18814426db752379866b0
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/bzip2/manifests/1.0.8-2
+######################################################################################## 100.0%
+==> Fetching bzip2
+==> Downloading https://ghcr.io/v2/homebrew/core/bzip2/blobs/sha256:a731afa70daaafec28359b4f10f
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/manifests/3.4.6
+######################################################################################## 100.0%
+==> Fetching libffi
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/blobs/sha256:798c3983a917698d5dd0c60063
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/unzip/manifests/6.0_8
+######################################################################################## 100.0%
+==> Fetching unzip
+==> Downloading https://ghcr.io/v2/homebrew/core/unzip/blobs/sha256:baf15e19852a0f9756e3302fa6f
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.12/manifests/3.12.4
+######################################################################################## 100.0%
+==> Fetching python@3.12
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:bedb3292805ced1e74ed6
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libyaml/manifests/0.2.5
+######################################################################################## 100.0%
+==> Fetching libyaml
+==> Downloading https://ghcr.io/v2/homebrew/core/libyaml/blobs/sha256:354677a745b6c62109e792ddb
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/gperf/manifests/3.1
+######################################################################################## 100.0%
+==> Fetching gperf
+==> Downloading https://ghcr.io/v2/homebrew/core/gperf/blobs/sha256:a91b89f648c21ae225074e0a9f4
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/ruby/manifests/3.3.4
+######################################################################################## 100.0%
+==> Fetching ruby
+==> Downloading https://ghcr.io/v2/homebrew/core/ruby/blobs/sha256:6cafaf06f366962038aa196b99e6
+######################################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/acl/manifests/2.3.2-1
+######################################################################################## 100.0%
+==> Fetching acl
+==> Downloading https://ghcr.io/v2/homebrew/core/acl/blobs/sha256:576bd92b4005247b37258f8c637e0
+######################################################################################## 100.0%
+==> Fetching vim
+==> Downloading https://ghcr.io/v2/homebrew/core/vim/blobs/sha256:8116534979d402bd037f7c29035df
+######################################################################################## 100.0%
+==> Installing dependencies for vim: icu4c, ncurses, readline, zlib, libxml2, gettext, libsodium, lua, berkeley-db@5, gdbm, expat, libxcrypt, perl, mpdecimal, ca-certificates, openssl@3, sqlite, xz, libedit, krb5, libtirpc, libnsl, bzip2, libffi, unzip, python@3.12, libyaml, gperf, ruby and acl
+==> Installing vim dependency: icu4c
+==> Downloading https://ghcr.io/v2/homebrew/core/icu4c/manifests/74.2
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/3e5230e726e5548db28bc0cf75710d6405903b742f941113d3dbe7483fad72a4--icu4c-74.2.bottle_manifest.json
+==> Pouring icu4c--74.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/icu4c/74.2: 271 files, 85.0MB
+==> Installing vim dependency: ncurses
+==> Downloading https://ghcr.io/v2/homebrew/core/ncurses/manifests/6.5
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/b2f8ce4e08b15832435170efd265346225ee388d5baab3d5c50e3a77c5673b5a--ncurses-6.5.bottle_manifest.json
+==> Pouring ncurses--6.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/ncurses/6.5: 4,037 files, 10.9MB
+==> Installing vim dependency: readline
+==> Downloading https://ghcr.io/v2/homebrew/core/readline/manifests/8.2.10
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/4ddd52803319828799f1932d4c7fa8d11c667049b20a56341c0c19246a1be93b--readline-8.2.10.bottle_manifest.json
+==> Pouring readline--8.2.10.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/readline/8.2.10: 51 files, 2MB
+==> Installing vim dependency: zlib
+==> Downloading https://ghcr.io/v2/homebrew/core/zlib/manifests/1.3.1
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/f68d0caf232d52f2aa586abefbbfd7e958e384d84f3967008fa83de94b5f10ae--zlib-1.3.1.bottle_manifest.json
+==> Pouring zlib--1.3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/zlib/1.3.1: 14 files, 476KB
+==> Installing vim dependency: libxml2
+==> Downloading https://ghcr.io/v2/homebrew/core/libxml2/manifests/2.12.8
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/957db51bbddf4033531b014eaff4b0d1b1472aa78abd3aa8c909b25b37b9cd8b--libxml2-2.12.8.bottle_manifest.json
+==> Pouring libxml2--2.12.8.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxml2/2.12.8: 202 files, 8.4MB
+==> Installing vim dependency: gettext
+==> Downloading https://ghcr.io/v2/homebrew/core/gettext/manifests/0.22.5
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/447e45b77bb47ede0377f7eab1863825298ecaaaeed0bbd84aca3bd300b00508--gettext-0.22.5.bottle_manifest.json
+==> Pouring gettext--0.22.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/gettext/0.22.5: 2,043 files, 26.2MB
+==> Installing vim dependency: libsodium
+==> Downloading https://ghcr.io/v2/homebrew/core/libsodium/manifests/1.0.20
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/a9a9a2e1207e214070682a14f6470fb686cbb6ba7c24c2c747c0ca0663f42557--libsodium-1.0.20.bottle_manifest.json
+==> Pouring libsodium--1.0.20.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libsodium/1.0.20: 79 files, 1.3MB
+==> Installing vim dependency: lua
+==> Downloading https://ghcr.io/v2/homebrew/core/lua/manifests/5.4.7
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/d2210560a2e24627c19106d7d878e251812e5f4f990c9fe13887746bfd4d7a21--lua-5.4.7.bottle_manifest.json
+==> Pouring lua--5.4.7.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/lua/5.4.7: 30 files, 1.4MB
+==> Installing vim dependency: berkeley-db@5
+==> Downloading https://ghcr.io/v2/homebrew/core/berkeley-db/5/manifests/5.3.28_1
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/17e4e0def00184b561c8a490b5c0813a7c4f5e1365eb2e927570786eb4e05e09--berkeley-db@5-5.3.28_1.bottle_manifest.json
+==> Pouring berkeley-db@5--5.3.28_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/berkeley-db@5/5.3.28_1: 5,272 files, 87.7MB
+==> Installing vim dependency: gdbm
+==> Downloading https://ghcr.io/v2/homebrew/core/gdbm/manifests/1.24
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/f9d3dc573240cb7eb6a7c9b42dd2e9591cc831662dedec947d70929e7868bccd--gdbm-1.24.bottle_manifest.json
+==> Pouring gdbm--1.24.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/gdbm/1.24: 44 files, 1.5MB
+==> Installing vim dependency: expat
+==> Downloading https://ghcr.io/v2/homebrew/core/expat/manifests/2.6.2
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/aef02777a16b814ca6284e98d9bfea8a80b97c8cbba6d78eca020ede9a5a6fcc--expat-2.6.2.bottle_manifest.json
+==> Pouring expat--2.6.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/expat/2.6.2: 23 files, 897.7KB
+==> Installing vim dependency: libxcrypt
+==> Downloading https://ghcr.io/v2/homebrew/core/libxcrypt/manifests/4.4.36
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/950e230307625f9e57d74f0076caab42b6c67a325c70b83efa2c9cc84be1f839--libxcrypt-4.4.36.bottle_manifest.json
+==> Pouring libxcrypt--4.4.36.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libxcrypt/4.4.36: 25 files, 371.8KB
+==> Installing vim dependency: perl
+==> Downloading https://ghcr.io/v2/homebrew/core/perl/manifests/5.38.2_1
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/e664800549b3654bc040f70178f610931fec1d5299fe0d845f2dd2b969ad1372--perl-5.38.2_1.bottle_manifest.json
+==> Pouring perl--5.38.2_1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/perl/5.38.2_1: 2,520 files, 75.0MB
+==> Installing vim dependency: mpdecimal
+==> Downloading https://ghcr.io/v2/homebrew/core/mpdecimal/manifests/4.0.0-1
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/7b63c3b34bee402290af49fac829a6682ab45ea5c9258b6fe03b590a03a4c4a9--mpdecimal-4.0.0-1.bottle_manifest.json
+==> Pouring mpdecimal--4.0.0.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/mpdecimal/4.0.0: 22 files, 802KB
+==> Installing vim dependency: ca-certificates
+==> Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2024-07-02
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/f1e786c502c23070efef1c7716aeaea181b28fd0cdbc5327d6d7c243b49e7700--ca-certificates-2024-07-02.bottle_manifest.json
+==> Pouring ca-certificates--2024-07-02.all.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/ca-certificates/2024-07-02: 4 files, 246.9KB
+==> Installing vim dependency: openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.3.1
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/667f7ac7d51b399107e055b7908f1922fcabba24c7d9d22f2b2d90a07c7c079c--openssl@3-3.3.1.bottle_manifest.json
+==> Pouring openssl@3--3.3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/openssl@3/3.3.1: 6,992 files, 38.9MB
+==> Installing vim dependency: sqlite
+==> Downloading https://ghcr.io/v2/homebrew/core/sqlite/manifests/3.46.0
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/7d6bff4676b4f32a64f5d9436491b1eedb27a559ef4ff63aaaa62834a981bcd0--sqlite-3.46.0.bottle_manifest.json
+==> Pouring sqlite--3.46.0.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/sqlite/3.46.0: 13 files, 6.2MB
+==> Installing vim dependency: xz
+==> Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.6.2
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/0f02a3a463ce4e72f92871751d9ba7b872ca8090348074d46ffb523fd67e1c7b--xz-5.6.2.bottle_manifest.json
+==> Pouring xz--5.6.2.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/xz/5.6.2: 97 files, 2.0MB
+==> Installing vim dependency: libedit
+==> Downloading https://ghcr.io/v2/homebrew/core/libedit/manifests/20240517-3.1
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/67f15ebf6a83422adb37138bcc6e4b513415c9eea86e56f88888328ad3763a66--libedit-20240517-3.1.bottle_manifest.json
+==> Pouring libedit--20240517-3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libedit/20240517-3.1: 55 files, 795.5KB
+==> Installing vim dependency: krb5
+==> Downloading https://ghcr.io/v2/homebrew/core/krb5/manifests/1.21.3
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/c5793441ca90aa09420dddd84f19d4aaf86da4f0b3f60c84940d77b1cb4c6863--krb5-1.21.3.bottle_manifest.json
+==> Pouring krb5--1.21.3.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/krb5/1.21.3: 164 files, 5.3MB
+==> Installing vim dependency: libtirpc
+==> Downloading https://ghcr.io/v2/homebrew/core/libtirpc/manifests/1.3.4
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/407fbda7ea10ab6e1bcef17c500b6c4592ae2e4fe26186501e4ddc55bcbce0f6--libtirpc-1.3.4.bottle_manifest.json
+==> Pouring libtirpc--1.3.4.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libtirpc/1.3.4: 86 files, 1MB
+==> Installing vim dependency: libnsl
+==> Downloading https://ghcr.io/v2/homebrew/core/libnsl/manifests/2.0.1
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/aa9502e1380fc6bf1af297a4f3d3402c1c175bd35d24d012b71a1a90c54d38bc--libnsl-2.0.1.bottle_manifest.json
+==> Pouring libnsl--2.0.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libnsl/2.0.1: 18 files, 195.8KB
+==> Installing vim dependency: bzip2
+==> Downloading https://ghcr.io/v2/homebrew/core/bzip2/manifests/1.0.8-2
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/c1a79a32cc9082c99fc318e6b2596b8b1f6e99abacb32bcbe88f979e4be5e4ea--bzip2-1.0.8-2.bottle_manifest.json
+==> Pouring bzip2--1.0.8.x86_64_linux.bottle.2.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/bzip2/1.0.8: 32 files, 607.5KB
+==> Installing vim dependency: libffi
+==> Downloading https://ghcr.io/v2/homebrew/core/libffi/manifests/3.4.6
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/2d373c9b8d06ce1d9634d08a4be79711fd482169e98bc830509aa28f3f07926d--libffi-3.4.6.bottle_manifest.json
+==> Pouring libffi--3.4.6.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libffi/3.4.6: 19 files, 768KB
+==> Installing vim dependency: unzip
+==> Downloading https://ghcr.io/v2/homebrew/core/unzip/manifests/6.0_8
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/b9a98c1a65dea38eb0bb5d9106a5758ed0ff17635811bd7f7cd6be5908c2961b--unzip-6.0_8.bottle_manifest.json
+==> Pouring unzip--6.0_8.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/unzip/6.0_8: 17 files, 600.7KB
+==> Installing vim dependency: python@3.12
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.12/manifests/3.12.4
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/2970a992f26f411cf71250ce54eb24411d8b065824b51819da7085559f09ce66--python@3.12-3.12.4.bottle_manifest.json
+==> Pouring python@3.12--3.12.4.x86_64_linux.bottle.tar.gz
+==> /home/linuxbrew/.linuxbrew/Cellar/python@3.12/3.12.4/bin/python3.12 -Im ensurepip
+==> /home/linuxbrew/.linuxbrew/Cellar/python@3.12/3.12.4/bin/python3.12 -Im pip install -v --no
+🍺  /home/linuxbrew/.linuxbrew/Cellar/python@3.12/3.12.4: 2,878 files, 72MB
+==> Installing vim dependency: libyaml
+==> Downloading https://ghcr.io/v2/homebrew/core/libyaml/manifests/0.2.5
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/5f6b0af1730aa1bc02f8021c90ed7ffe988eeba95eec83e6c828f77332ba6406--libyaml-0.2.5.bottle_manifest.json
+==> Pouring libyaml--0.2.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libyaml/0.2.5: 12 files, 394.2KB
+==> Installing vim dependency: gperf
+==> Downloading https://ghcr.io/v2/homebrew/core/gperf/manifests/3.1
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/da1bea6822381d6f77de37e60a973f28ee167f936d7e204c8bd0ec86ff0e7a42--gperf-3.1.bottle_manifest.json
+==> Pouring gperf--3.1.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/gperf/3.1: 12 files, 557.4KB
+==> Installing vim dependency: ruby
+==> Downloading https://ghcr.io/v2/homebrew/core/ruby/manifests/3.3.4
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/719ec7d415e32b4296153fb8dd877566f30256a312ef32c2111fb9ba781cdfe8--ruby-3.3.4.bottle_manifest.json
+==> Pouring ruby--3.3.4.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/ruby/3.3.4: 19,841 files, 59MB
+==> Installing vim dependency: acl
+==> Downloading https://ghcr.io/v2/homebrew/core/acl/manifests/2.3.2-1
+Already downloaded: /home/linuxbrew/.cache/Homebrew/downloads/5339b552595050060f2c88e8863e4b68c178f23cb331ed16a2b9f315e1056987--acl-2.3.2-1.bottle_manifest.json
+==> Pouring acl--2.3.2.x86_64_linux.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/acl/2.3.2: 71 files, 727.5KB
+==> Installing vim
+==> Pouring vim--9.1.0600.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/vim/9.1.0600: 2,333 files, 50MB
+==> Running `brew cleanup vim`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ vim ~/.bashrc 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ soruce ~/.bashrc          
+bash: soruce: command not found
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ source ~/.bashrc 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/db.go:5:2: "os" imported and not used
+cmd/helper/db.go:47:19: undefined: GetRegistrarTable
+cmd/helper/helper.go:4:2: "fmt" imported and not used
+cmd/helper/helper.go:5:2: "net" imported and not used
+cmd/helper/helper.go:6:2: "os" imported and not used
+cmd/helper/helper.go:7:2: "os/signal" imported and not used
+cmd/helper/helper.go:8:2: "path/filepath" imported and not used
+cmd/helper/helper.go:9:2: "syscall" imported and not used
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/db.go:5:2: "os" imported and not used
+cmd/helper/db.go:47:19: undefined: GetRegistrarTable
+cmd/helper/helper.go:4:2: "fmt" imported and not used
+cmd/helper/helper.go:5:2: "net" imported and not used
+cmd/helper/helper.go:6:2: "os" imported and not used
+cmd/helper/helper.go:7:2: "os/signal" imported and not used
+cmd/helper/helper.go:8:2: "path/filepath" imported and not used
+cmd/helper/helper.go:9:2: "syscall" imported and not used
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/db.go:5:2: "os" imported and not used
+cmd/helper/db.go:47:19: undefined: GetRegistrarTable
+cmd/helper/db.go:47:58: undefined: entitiesPath
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/db.go:5:2: "os" imported and not used
+cmd/helper/db.go:47:19: undefined: GetRegistrarTable
+cmd/helper/db.go:47:58: undefined: entitiesPath
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/db.go:5:2: "os" imported and not used
+cmd/helper/db.go:26:9: undefined: dbName
+cmd/helper/db.go:47:58: undefined: entitiesPath
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/db.go:47:58: undefined: entitiesPath
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+
+
+
+
+# to update sub-directory of github
+go get -u github.com/defensestation/goauth
+
+
+
+# go cloud error
+go get cloud.google.com/go/compute/metadata
+
+
+
+
+# remaing file setup of setup 
+
+
+Last login: Sat Jul 20 19:09:04 on ttys003
+/Users/bipansharma/.zsh_sessions/86177B70-D361-4125-8194-0890CB18E5DE.session:1: command not found: ^[]7
+/Users/bipansharma/.zsh_sessions/86177B70-D361-4125-8194-0890CB18E5DE.session:1: no such file or directory: file://Bipans-MacBook-Pro.local/Users/bipansharma/Documents/hovr^G
+/Users/bipansharma/.zsh_sessions/86177B70-D361-4125-8194-0890CB18E5DE.session:2: command not found: Saving
+bipansharma@Bipans-MacBook-Pro hovr % clear
+
+bipansharma@Bipans-MacBook-Pro hovr % pdocker
+[*] List of containers ids. Newer are first.
+=======================
+    ID 		 Name
+------------  --------
+8a74c87a7bfe	hovr
+=======================
+[*] Type the Container ID or Name:8 
+[*] Staring 8 container...
+8
+linuxbrew@8a74c87a7bfe:/home$ ls
+hovr  linuxbrew
+linuxbrew@8a74c87a7bfe:/home$ cd hovr/backend/iam-service/
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+Failure: plugin go-grpc: could not find protoc plugin for name go-grpc - please make sure protoc-gen-go-grpc is installed and present on your $PATH
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$  go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+go: downloading google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.4.0
+go: downloading google.golang.org/protobuf v1.34.1
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+Failure: plugin genesis: could not find protoc plugin for name genesis - please make sure protoc-gen-genesis is installed and present on your $PATH
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ go install github.com/defensestation/protoc-gen-genesis
+no required module provides package github.com/defensestation/protoc-gen-genesis; to add it:
+	go get github.com/defensestation/protoc-gen-genesis
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ go install github.com/defensestation/protoc-gen-genesis@latest 
+go: downloading github.com/defensestation/protoc-gen-genesis v0.0.0-20230330091509-dfe609163be5
+go: downloading google.golang.org/protobuf v1.27.1
+go: downloading go.uber.org/zap v1.19.0
+go: downloading github.com/iancoleman/strcase v0.2.0
+go: downloading go.uber.org/atomic v1.7.0
+go: downloading go.uber.org/multierr v1.6.0
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+Failure: plugin genesis: could not find protoc plugin for name genesis - please make sure protoc-gen-genesis is installed and present on your $PATH
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ go get -u github.com/defensestation/protoc-gen-genesis       
+go: downloading github.com/iancoleman/strcase v0.3.0
+go: added github.com/defensestation/protoc-gen-genesis v0.0.0-20230330091509-dfe609163be5
+go: added github.com/iancoleman/strcase v0.3.0
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+Failure: plugin go-grpc: could not find protoc plugin for name go-grpc - please make sure protoc-gen-go-grpc is installed and present on your $PATH
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ go get -u google.golang.org/grpc/cmd/protoc-gen-go-grpc       
+go: added google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.4.0
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+Failure: plugin genesis: could not find protoc plugin for name genesis - please make sure protoc-gen-genesis is installed and present on your $PATH
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ go get -u google.golang.org/grpc/cmd/protoc-gen-go-grpc^C
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ export PATH="$PATH:$(go env GOPATH)/bin"
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+api/v1/iam/iam.proto:4:8:import "vendors/genesis/genesis.proto": file does not exist
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x71a040]
+
+goroutine 1 [running]:
+github.com/defensestation/protoc-gen-genesis/generator/handler.(*Handler).generate(0xc000035e70)
+	/home/linuxbrew/go/pkg/mod/github.com/defensestation/protoc-gen-genesis@v0.0.0-20230330091509-dfe609163be5/generator/handler/handler.go:71 +0x120
+github.com/defensestation/protoc-gen-genesis/generator/handler.Run(...)
+	/home/linuxbrew/go/pkg/mod/github.com/defensestation/protoc-gen-genesis@v0.0.0-20230330091509-dfe609163be5/generator/handler/handler.go:52
+github.com/defensestation/protoc-gen-genesis/generator.(*Generator).Run(0x8e6c38?)
+	/home/linuxbrew/go/pkg/mod/github.com/defensestation/protoc-gen-genesis@v0.0.0-20230330091509-dfe609163be5/generator/generator.go:33 +0x6b
+main.main()
+	/home/linuxbrew/go/pkg/mod/github.com/defensestation/protoc-gen-genesis@v0.0.0-20230330091509-dfe609163be5/main.go:45 +0x1f4
+Failure: plugin genesis: exit status 2
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+api/v1/iam/iam.proto:4:1:syntax error: expecting ';'
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+internal/v1/handler/iam_service/request_otp.go:10:2: no required module provides package github.com/ridehovr/gen/protos/api/iam/v1; to add it:
+	go get github.com/ridehovr/gen/protos/api/iam/v1
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/internal/v1/handler/iam_service
+internal/v1/handler/iam_service/iam.go:4:2: "github.com/redis/go-redis/v9" imported as redis and not used
+internal/v1/handler/iam_service/iam.go:20:15: undefined: v9
+internal/v1/handler/iam_service/iam.go:30:9: undefined: v9
+internal/v1/handler/iam_service/request_otp.go:22:15: in.ValidateAll undefined (type *protos.RequestOTPRequest has no field or method ValidateAll)
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/internal/v1/handler/iam_service
+internal/v1/handler/iam_service/request_otp.go:22:15: in.ValidateAll undefined (type *protos.RequestOTPRequest has no field or method ValidateAll)
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/internal/v1/handler/iam_service
+internal/v1/handler/iam_service/request_otp.go:6:2: "go.uber.org/zap" imported and not used
+internal/v1/handler/iam_service/request_otp.go:21:2: logger declared and not used
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/internal/v1/handler/iam_service
+internal/v1/handler/iam_service/request_otp.go:21:2: logger declared and not used
+internal/v1/handler/iam_service/request_otp.go:21:12: undefined: logger
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/internal/v1/handler
+internal/v1/handler/handler.go:24:5: undefined: vendor
+internal/v1/handler/handler.go:26:89: too many arguments in call to iam.NewIamServiceServer
+	have (*dynamoutils.Client, *zap.Logger, *broker.Exchange, *"github.com/ridehovr/iam-service/configs".Configurations, *redis.Client, *protovalidate.Validator, *dynamoutils.EntStore)
+	want (*dynamoutils.Client, *zap.Logger, *broker.Exchange, *"github.com/ridehovr/iam-service/configs".Configurations, *redis.Client, *dynamoutils.EntStore)
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/internal/v1/handler
+internal/v1/handler/handler.go:26:89: too many arguments in call to iam.NewIamServiceServer
+	have (*dynamoutils.Client, *zap.Logger, *broker.Exchange, *"github.com/ridehovr/iam-service/configs".Configurations, *redis.Client, *protovalidate.Validator, *dynamoutils.EntStore)
+	want (*dynamoutils.Client, *zap.Logger, *broker.Exchange, *"github.com/ridehovr/iam-service/configs".Configurations, *redis.Client, *dynamoutils.EntStore)
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+\linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ \
+> 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$  
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/helper.go:58:47: assignment mismatch: 3 variables but handler.NewServices returns 1 value
+cmd/helper/helper.go:58:132: too many arguments in call to handler.NewServices
+	have (*dynamoutils.Client, *zap.Logger, *broker.Exchange, *"github.com/ridehovr/iam-service/configs".Configurations, *redis.Client, *protovalidate.Validator, *dynamoutils.EntStore, *"github.com/defensestation/goutils/presign/providers/s3".S3)
+	want (*dynamoutils.Client, *zap.Logger, *broker.Exchange, *"github.com/ridehovr/iam-service/configs".Configurations, *redis.Client, *protovalidate.Validator, *dynamoutils.EntStore)
+cmd/helper/helper.go:61:2: undefined: pb
+cmd/helper/helper.go:62:2: undefined: pb
+cmd/helper/helper.go:63:2: undefined: pb
+cmd/helper/helper.go:66:17: undefined: consumers
+cmd/helper/helper.go:140:40: cannot use exchange (variable of type *broker.Exchange) as *broker.Broker value in argument to auth.NewAuthN
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/helper.go:61:2: undefined: pb
+cmd/helper/helper.go:139:40: cannot use exchange (variable of type *broker.Exchange) as *broker.Broker value in argument to auth.NewAuthN
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/helper.go:139:40: cannot use exchange (variable of type *broker.Exchange) as *broker.Broker value in argument to auth.NewAuthN
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/helper.go:94:15: not enough return values
+	have (nil, error)
+	want (*broker.Broker, *broker.Exchange, error)
+cmd/helper/helper.go:127:17: undefined: broker.Brocker
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/helper.go:94:15: not enough return values
+	have (nil, error)
+	want (*broker.Broker, *broker.Exchange, error)
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# command-line-arguments
+cmd/server/main.go:90:2: server declared and not used
+cmd/server/main.go:99:3: undefined: provider
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# command-line-arguments
+cmd/server/main.go:99:3: undefined: provider
+cmd/server/main.go:103:9: undefined: helper.StartServer
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# command-line-arguments
+cmd/server/main.go:98:3: not enough arguments in call to helper.NewGrpcServer
+	have (*dynamoutils.Client, *zap.Logger, *broker.Broker, *broker.Exchange, *"github.com/ridehovr/iam-service/configs".Configurations, *redis.Client, *protovalidate.Validator, *dynamoutils.EntStore)
+	want (*dynamoutils.Client, *zap.Logger, *broker.Broker, *broker.Exchange, *"github.com/ridehovr/iam-service/configs".Configurations, *redis.Client, *protovalidate.Validator, *dynamoutils.EntStore, *"github.com/defensestation/goutils/presign/providers/s3".S3)
+cmd/server/main.go:103:9: undefined: helper.StartServer
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/helper.go:169:92: use of package s3 not in selector
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/helper.go:169:84: not enough arguments in call to RegisterServices
+	have (*dynamoutils.Client, *zap.Logger, *broker.Exchange, *"github.com/ridehovr/iam-service/configs".Configurations, *redis.Client, *protovalidate.Validator, *dynamoutils.EntStore, *grpc.Server)
+	want (*dynamoutils.Client, *zap.Logger, *broker.Exchange, *"github.com/ridehovr/iam-service/configs".Configurations, *redis.Client, *protovalidate.Validator, *dynamoutils.EntStore, *grpc.Server, *"github.com/defensestation/goutils/presign/providers/s3".S3)
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/helper.go:29:2: "github.com/defensestation/goutils/presign/providers/s3" imported and not used
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# command-line-arguments
+cmd/server/main.go:103:9: undefined: helper.StartServer
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+# github.com/ridehovr/iam-service/cmd/helper
+cmd/helper/helper.go:180:2: undefined: signal
+cmd/helper/helper.go:180:26: undefined: syscall
+cmd/helper/helper.go:191:18: undefined: net
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+true
+{"level":"fatal","ts":1721484730.1651974,"caller":"server/main.go:40","msg":"unable to setup dynamodb:","service":"iam","error":"open internal/v1/entities/entities.json: no such file or directory","stacktrace":"main.main\n\t/home/hovr/backend/iam-service/cmd/server/main.go:40\nruntime.main\n\t/home/linuxbrew/.linuxbrew/Cellar/go/1.22.5/libexec/src/runtime/proc.go:271"}
+exit status 1
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+true
+{"level":"fatal","ts":1721484908.2319891,"caller":"server/main.go:40","msg":"unable to setup dynamodb:","service":"iam","error":"no entities found","stacktrace":"main.main\n\t/home/hovr/backend/iam-service/cmd/server/main.go:40\nruntime.main\n\t/home/linuxbrew/.linuxbrew/Cellar/go/1.22.5/libexec/src/runtime/proc.go:271"}
+exit status 1
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+true
+{"level":"fatal","ts":1721484942.8127995,"caller":"server/main.go:40","msg":"unable to setup dynamodb:","service":"iam","error":"no entities found","stacktrace":"main.main\n\t/home/hovr/backend/iam-service/cmd/server/main.go:40\nruntime.main\n\t/home/linuxbrew/.linuxbrew/Cellar/go/1.22.5/libexec/src/runtime/proc.go:271"}
+exit status 1
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ gor
+true
+&{0xc00048a540} &{map[vendor:0xc00035e5a0]}
+{"level":"fatal","ts":1721485002.0360625,"caller":"server/main.go:48","msg":"unable to setup broker:","service":"iam","error":"unable to build exchange: dial tcp 172.20.0.5:5672: i/o timeout","stacktrace":"main.main\n\t/home/hovr/backend/iam-service/cmd/server/main.go:48\nruntime.main\n\t/home/linuxbrew/.linuxbrew/Cellar/go/1.22.5/libexec/src/runtime/proc.go:271"}
+exit status 1
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ buf generate --path api/
+linuxbrew@8a74c87a7bfe:/home/hovr/backend/iam-service$ 

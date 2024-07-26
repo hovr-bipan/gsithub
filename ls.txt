@@ -1,0 +1,35 @@
+ls
+cd hovr/
+ls
+mkdir backend
+# Substitute BIN for your bin directory.
+# Substitute VERSION for the current released version.
+BIN="/usr/local/bin" && VERSION="1.34.0" && curl -sSL "https://github.com/bufbuild/buf/releases/download/v${VERSION}/buf-$(uname -s)-$(uname -m)" -o "${BIN}/buf" && chmod +x "${BIN}/buf"
+apt-get install wget
+ks
+cd /usr/local/
+wget https://go.dev/dl/go1.22.5.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.22.5.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+go
+buf
+cd
+cd /home/hovr/
+ls
+cd backend/
+clear
+git clone git@github.com:ridehovr/iam-service.git
+ssh-keygen
+cat ~/.ssh/id_rsa.pub             
+git clone git@github.com:ridehovr/iam-service.git
+ls
+cd iam-service/
+git branch test
+clear
+ls
+buf generate --path api/
+git pull origin test
+apt-get install vim
+clear
+vim ~/.bashrc 
+exit
